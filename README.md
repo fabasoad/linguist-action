@@ -9,7 +9,7 @@ This action uses _linguist_ library that is used on GitHub.com to detect blob la
 
 _[Optional]_ Path to the repository. Default `"./"`.
 
-### `percentage`
+### `percentage` 
 
 _[Optional]_ In case of `true` output will be in percentage format, e.g. `{"Python":"100%"}`, otherwise - `false`, e.g. `{"Python":1.0}`. Default `false`.
 
