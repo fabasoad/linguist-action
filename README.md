@@ -1,7 +1,7 @@
 # Linguist action
 ![Linguist](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg?branch=master)
 
-This action uses _linguist_ library that is used on GitHub.com to detect blob languages, ignore binary or vendored files, suppress generated files in diffs, and generate language breakdown graphs in _JSON_ format.
+This action uses _linguist_ library that is used on GitHub.com to detect language type for a file, or, given a repository, determine language breakdown in JSON format.
 
 ## Inputs
 
@@ -9,23 +9,47 @@ This action uses _linguist_ library that is used on GitHub.com to detect blob la
 
 _[Optional]_ Path to the repository. Default `"./"`.
 
-### `percentage` 
+### `percentage`
 
-_[Optional]_ In case of `true` output will be in percentage format, e.g. `{"Python":"100%"}`, otherwise - `false`, e.g. `{"Python":1.0}`. Default `false`.
+_[Optional]_ In case of `true` output will be in percentage format, otherwise - in fractions. Default `false`.
 
 ## Outputs
 
 ### `data`
 
-Result in JSON format. Example:
+Result in JSON format.
+#### Examples
+1. For folder in case of _percentage=true_:
 ```json
 {
-    "JavaScript": 95,
-    "Dockerfile": 5
+  "Ruby": "75.21%",
+  "Dockerfile": "19.80%",
+  "Shell": "5.00%"
 }
 ```
-
+2. For folder in case of _percentage=false_:
+```json
+{
+  "Ruby": 0.7520556609740671,
+  "Dockerfile": 0.19797596457938013,
+  "Shell": 0.04996837444655281
+}
+```
+3. For file:
+```json
+{
+  "linguist.rb": {
+    "lines": 56,
+    "sloc": 48,
+    "type": "Text",
+    "mime_type": "application/x-ruby",
+    "language": "Ruby"
+  }
+}
+```
 ## Example usage
+
+### Workflow configuration
 
 ```yaml
 name: Linguist
@@ -42,7 +66,10 @@ jobs:
         id: linguist
         with:
           path: './'
-          percentage: false
+          percentage: true
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
 ```
+
+### Result
+![Result](https://raw.githubusercontent.com/fabasoad/linguist-action/master/screenshot.png)
