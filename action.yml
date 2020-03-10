@@ -1,5 +1,5 @@
-name: 'Linguist'
-description: 'This action detects languages in provided repository and give it to you in output'
+name: 'Linguist Action'
+description: 'This action detects language type for a file, or, given a repository, determine language breakdown in JSON format.'
 inputs:
   path:
     description: 'Path to the repository'
