@@ -1,10 +1,12 @@
 # Linguist action
 
-This action uses a JavaScript wrapper for _linguist_ library that is used on GitHub.com to detect blob languages, ignore binary or vendored files, suppress generated files in diffs, and generate language breakdown graphs in _JSON_ format.
+This action uses _linguist_ library that is used on GitHub.com to detect blob languages, ignore binary or vendored files, suppress generated files in diffs, and generate language breakdown graphs in _JSON_ format.
 
 ## Inputs
 
-No inputs are needed.
+### `path`
+
+_[Optional]_ Path to the repository. Default `"./"`.
 
 ## Outputs
 

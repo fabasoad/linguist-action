@@ -1,8 +1,15 @@
 name: 'Linguist'
 description: 'This action detects languages in provided repository and give it to you in output'
+inputs:
+  path:
+    description: 'Path to the repository'
+    required: false
+    default: './'
 outputs:
   data:
-    description: 'Result pf output'
+    description: 'Result of the output'
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.path }}
