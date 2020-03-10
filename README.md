@@ -1,4 +1,5 @@
 # Linguist action
+![](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg)
 
 This action uses _linguist_ library that is used on GitHub.com to detect blob languages, ignore binary or vendored files, suppress generated files in diffs, and generate language breakdown graphs in _JSON_ format.
 
@@ -30,7 +31,7 @@ on: push
 jobs:
   linguist:
     name: Run linguist
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - uses: fabasoad/linguist-action@v1
