@@ -1,5 +1,5 @@
 # Linguist action
-![](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg)
+![Linguist](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg?branch=master)
 
 This action uses _linguist_ library that is used on GitHub.com to detect blob languages, ignore binary or vendored files, suppress generated files in diffs, and generate language breakdown graphs in _JSON_ format.
 
