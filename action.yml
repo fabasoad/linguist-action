@@ -5,6 +5,10 @@ inputs:
     description: 'Path to the repository'
     required: false
     default: './'
+  percentage:
+    description: 'Output will be in percentage format, e.g. {"Python":"100%"}. By default it is in fractions, e.g. {"Python":1.0}. Default: false.'
+    required: false
+    default: false
 outputs:
   data:
     description: 'Result of the output'
@@ -13,3 +17,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.path }}
+    - ${{ inputs.percentage }}

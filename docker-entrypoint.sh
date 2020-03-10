@@ -1,7 +1,3 @@
 #!/bin/sh -l
-cd $1
-echo "Checking languages in $(pwd)..."
-data=$(github-linguist)
-echo "Result:"
-echo $data
-echo ::set-output name=data::$(data)
+data=$(ruby /app/linguist.rb $1 $2)
+echo ::set-output name=data::$data

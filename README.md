@@ -9,6 +9,10 @@ This action uses _linguist_ library that is used on GitHub.com to detect blob la
 
 _[Optional]_ Path to the repository. Default `"./"`.
 
+### `percentage`
+
+_[Optional]_ In case of `true` output will be in percentage format, e.g. `{"Python":"100%"}`, otherwise - `false`, e.g. `{"Python":1.0}`. Default `false`.
+
 ## Outputs
 
 ### `data`
@@ -36,6 +40,9 @@ jobs:
       - uses: actions/checkout@v1
       - uses: fabasoad/linguist-action@v1
         id: linguist
+        with:
+          path: './'
+          percentage: false
       - name: Print linguist result
         run: echo "${{ steps.linguist.outputs.data }}"
 ```
