@@ -1,0 +1,8 @@
+name: 'Linguist'
+description: 'This action detects languages in provided repository and give it to you in output'
+outputs:
+  data:
+    description: 'Result pf output'
+runs:
+  using: 'node12'
+  main: 'index.js'
