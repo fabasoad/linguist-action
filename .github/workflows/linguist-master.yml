@@ -1,0 +1,17 @@
+name: Linguist (master)
+
+on: push
+
+jobs:
+  linguist:
+    name: Run linguist
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: fabasoad/linguist-action@master
+        id: linguist
+        with:
+          path: './'
+          percentage: true
+      - name: Print linguist result
+        run: echo "${{ steps.linguist.outputs.data }}"

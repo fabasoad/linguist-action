@@ -1,9 +1,9 @@
 name: Ruby Lint
 
-on: push
-#   push:
-#     paths:
-#       - '**.rb'
+on:
+  push:
+    paths:
+      - '**.rb'
 
 jobs:
   lint:
