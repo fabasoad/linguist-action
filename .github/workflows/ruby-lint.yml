@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - uses: andrewmcodes/standardrb-action@v0.0.2
+      - uses: andrewmcodes/rubocop-linter-action@v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
