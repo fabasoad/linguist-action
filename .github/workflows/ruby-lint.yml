@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - uses: devmasx/brakeman-linter-action@v1.0.0
+      - uses: andrewmcodes/standardrb-action@v0.0.2
         env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
