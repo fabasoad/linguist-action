@@ -1,0 +1,16 @@
+name: Ruby Lint
+
+on: push
+#   push:
+#     paths:
+#       - '**.rb'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: adwerx/pronto-ruby
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
