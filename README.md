@@ -1,7 +1,7 @@
 # Linguist action
-![Linguist](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg?branch=master)
+![Linguist](https://github.com/fabasoad/linguist-action/workflows/Linguist/badge.svg?branch=master) [![Maintainability](https://api.codeclimate.com/v1/badges/13229b16ea7db1df48ff/maintainability)](https://codeclimate.com/github/fabasoad/linguist-action/maintainability) ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/linguist-action?include_prereleases)
 
-This action uses _linguist_ library that is used on GitHub.com to detect language type for a file, or, given a repository, determine language breakdown in JSON format.
+This action uses [github/linguist](https://github.com/github/linguist) library to detect language type for a file, or, given a repository, determine language breakdown in JSON format.
 
 ## Inputs
 
