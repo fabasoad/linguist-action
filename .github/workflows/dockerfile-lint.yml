@@ -1,9 +1,9 @@
 name: Dockerfile Lint
 
-on: push
-#   push:
-#     paths:
-#       - 'Dockerfile'
+on:
+  push:
+    paths:
+      - 'Dockerfile'
 
 jobs:
   lint:
@@ -11,8 +11,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v1
-      - name: Lint
-        uses: burdzwastaken/hadolint-action@master
+      - uses: burdzwastaken/hadolint-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           HADOLINT_ACTION_DOCKERFILE_FOLDER: ./
