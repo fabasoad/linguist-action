@@ -1,0 +1,14 @@
+name: YAML Lint
+
+on:
+  push:
+    paths:
+      - '**.yml'
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: ibiqlik/action-yamllint@v1.0.0
