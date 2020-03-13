@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    charlock_holmes (0.7.7)
+    escape_utils (1.2.1)
+    github-linguist (7.8.0)
+      charlock_holmes (~> 0.7.6)
+      escape_utils (~> 1.2.0)
+      mini_mime (~> 1.0)
+      rugged (>= 0.25.1)
+    mini_mime (1.0.2)
+    rugged (0.99.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  github-linguist (= 7.8.0)!
+
+BUNDLED WITH
+   2.1.4
