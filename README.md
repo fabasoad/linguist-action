@@ -1,23 +1,19 @@
 # Linguist action
-![Linguist (latest)](https://github.com/fabasoad/linguist-action/workflows/Linguist%20(latest)/badge.svg) ![Linguist (master)](https://github.com/fabasoad/linguist-action/workflows/Linguist%20(master)/badge.svg) ![Ruby Lint](https://github.com/fabasoad/linguist-action/workflows/Ruby%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/linguist-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/linguist-action/workflows/Shell%20Lint/badge.svg) [![Maintainability](https://api.codeclimate.com/v1/badges/13229b16ea7db1df48ff/maintainability)](https://codeclimate.com/github/fabasoad/linguist-action/maintainability) ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/linguist-action?include_prereleases)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/linguist-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/linguist-action/workflows/CI%20(latest)/badge.svg) ![CI (master)](https://github.com/fabasoad/linguist-action/workflows/CI%20(master)/badge.svg) ![YAML Lint](https://github.com/fabasoad/linguist-action/workflows/YAML%20Lint/badge.svg) ![Ruby Lint](https://github.com/fabasoad/linguist-action/workflows/Ruby%20Lint/badge.svg) ![Dockerfile Lint](https://github.com/fabasoad/linguist-action/workflows/Dockerfile%20Lint/badge.svg) ![Shell Lint](https://github.com/fabasoad/linguist-action/workflows/Shell%20Lint/badge.svg)
 
 This action uses [github/linguist](https://github.com/github/linguist) library to detect language type for a file, or, given a repository, determine language breakdown in JSON format.
 
 ## Inputs
-
-### `path`
-
-_[Optional]_ Path to the repository. Default `"./"`.
-
-### `percentage`
-
-_[Optional]_ In case of `true` output will be in percentage format, otherwise - in fractions. Default `false`.
+| Name       | Required | Description                                                                     | Default | Possible values |
+|------------|----------|---------------------------------------------------------------------------------|---------|-----------------|
+| path       | No       | Path to the repository                                                          | `./`    | &lt;Path&gt;    |
+| percentage | No       | In case of `true` output will be in percentage format, otherwise - in fractions | false   | &lt;Boolean&gt; |
 
 ## Outputs
+| Name | Required | Description           |
+|------|----------|-----------------------|
+| data | Yes      | Result in JSON format |
 
-### `data`
-
-Result in JSON format.
 #### Examples
 1. For folder in case of _percentage=true_:
 ```json

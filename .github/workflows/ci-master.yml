@@ -1,0 +1,25 @@
+---
+name: CI (master)
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  functional_tests:
+    name: Functional tests
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.1.0
+      - uses: ./
+        id: linguist
+        with:
+          percentage: true
+      - name: Validate linguist result
+        run: |
+          [[ '{"Ruby":"72.27%","Dockerfile":"23.94%","Shell":"3.78%"}' == "${{ steps.linguist.outputs.data }}" ]] || exit 1;

@@ -1,3 +1,4 @@
+---
 name: 'Linguist Action'
 description: 'This action detects language type for a file, or, given a repository, determine language breakdown in JSON format.'
 branding:

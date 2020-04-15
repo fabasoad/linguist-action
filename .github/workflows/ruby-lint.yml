@@ -1,3 +1,4 @@
+---
 name: Ruby Lint
 
 on:
@@ -8,9 +9,10 @@ on:
 jobs:
   lint:
     name: Lint
-    runs-on: ubuntu-18.04
+    timeout-minutes: 3
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: andrewmcodes/rubocop-linter-action@v3.0.0
+      - uses: actions/checkout@v2.1.0
+      - uses: andrewmcodes/rubocop-linter-action@v3.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
