@@ -57,8 +57,8 @@ jobs:
     name: Run linguist
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: fabasoad/linguist-action@v1.0.0
+      - uses: actions/checkout@main
+      - uses: fabasoad/linguist-action@main
         id: linguist
         with:
           path: './'
@@ -68,4 +68,8 @@ jobs:
 ```
 
 ### Result
-![Result](https://raw.githubusercontent.com/fabasoad/linguist-action/main/screenshot.png)
+
+```shell
+Run echo "{"Ruby":"75.21%","Dockerfile":"19.80%","Shell":"5.00%"}"
+{Ruby:75.21%,Dockerfile:19.80%,Shell:5.00%}
+```
