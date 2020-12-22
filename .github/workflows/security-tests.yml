@@ -1,5 +1,5 @@
 ---
-name: CI (main)
+name: Security tests
 
 on:
   push:
@@ -23,16 +23,3 @@ jobs:
           docker build -t ${{ github.repository }}:${{ github.sha }} .
           snyk auth ${{ secrets.SNYK_API_TOKEN }}
           snyk test --docker ${{ github.repository }}:${{ github.sha }} --file=Dockerfile
-  functional_tests:
-    name: Functional tests
-    timeout-minutes: 5
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.4
-      - uses: ./
-        id: linguist
-        with:
-          percentage: true
-      - name: Validate linguist result
-        run: |
-          [[ '{"Ruby":"76.68%","Dockerfile":"19.31%","Shell":"4.01%"}' == '${{ steps.linguist.outputs.data }}' ]] || exit 1;
