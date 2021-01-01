@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'linguist'
-require 'rugged'
-require 'json'
-require 'optparse'
+require "linguist"
+require "rugged"
+require "json"
+require "optparse"
 
 path = ARGV[0] || Dir.pwd
 
@@ -19,7 +19,7 @@ if File.directory?(path)
     value = (size / repo.size.to_f)
     if percentage
       value *= 100
-      value = sprintf '%.2f' % value
+      value = sprintf "%.2f" % value
       value = "#{value}%"
     end
     data[language] = value   
@@ -29,11 +29,11 @@ elsif File.file?(path)
   blob = Linguist::FileBlob.new(path, Dir.pwd)
 
   type = if blob.text?
-    'Text'
+    "Text"
   elsif blob.image?
-    'Image'
+    "Image"
   else
-    'Binary'
+    "Binary"
   end
 
   puts JSON.generate({
