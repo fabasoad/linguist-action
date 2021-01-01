@@ -1,12 +1,21 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
   "cSpell.words": [
     "andrewmcodes",
+    "appium",
     "bewuethr",
     "burdzwastaken",
     "hadolint",
     "ibiqlik",
     "issuehunt",
     "liberapay",
+    "markdownlint",
+    "semver",
+    "simbo",
+    "sloc",
+    "vulns",
     "yamllint"
   ]
 }

@@ -1,3 +1,3 @@
 source 'https://rubygems.org' do
-    gem 'github-linguist', '7.8.0'
+    gem 'github-linguist', '7.12.2'
 end
