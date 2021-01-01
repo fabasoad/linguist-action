@@ -1,2 +1,4 @@
+.bundle/*
+!.bundle/config
 .vscode/*
 !.vscode/settings.json
