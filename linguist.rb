@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: false
 
 require "linguist"
 require "rugged"
@@ -14,15 +15,15 @@ if File.directory?(path)
   rugged = Rugged::Repository.new(path)
   repo = Linguist::Repository.new(rugged, rugged.head.target_id)
 
-  data = Hash.new()
-  repo.languages.sort_by { |_, size| size }.reverse.each do |language, size|
+  data = Hash.new
+  repo.languages.sort_by { |_, size| size }.reverse_each do |language, size|
     value = (size / repo.size.to_f)
     if percentage
       value *= 100
       value = sprintf "%.2f" % value
       value = "#{value}%"
     end
-    data[language] = value   
+    data[language] = value
   end
   puts JSON.generate(data)
 elsif File.file?(path)
@@ -38,11 +39,11 @@ elsif File.file?(path)
 
   puts JSON.generate({
     blob.name => {
-      :lines => blob.loc,
-      :sloc => blob.sloc,
-      :type => type,
-      :mime_type => blob.mime_type,
-      :language => blob.language
+      :lines: blob.loc,
+      :sloc: blob.sloc,
+      :type: type,
+      :mime_type: blob.mime_type,
+      :language: blob.language
     }
   })
 else
