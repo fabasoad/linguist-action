@@ -37,14 +37,14 @@ elsif File.file?(path)
     "Binary"
   end
 
+  json = Hash.new
+  json["lines"] = blob.loc
+  json["sloc"] = blob.sloc
+  json["type"] = type
+  json["mime_type"] = blob.mime_type
+  json["language"] = blob.language
   puts JSON.generate({
-    blob.name => {
-      :lines: blob.loc,
-      :sloc: blob.sloc,
-      :type: type,
-      :mime_type: blob.mime_type,
-      :language: blob.language
-    }
+    blob.name => json
   })
 else
   abort <<-HELP
