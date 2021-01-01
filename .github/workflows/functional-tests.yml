@@ -21,4 +21,4 @@ jobs:
           percentage: true
       - name: Validate linguist result
         run: |
-          [[ '{"Ruby":"76.68%","Dockerfile":"19.31%","Shell":"4.01%"}' == '${{ steps.linguist.outputs.data }}' ]] || exit 1;
+          [[ '{"Ruby":"71.85%","Dockerfile":"23.30%","Shell":"4.84%"}' == '${{ steps.linguist.outputs.data }}' ]] || exit 1;
