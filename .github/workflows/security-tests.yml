@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     container: snyk/snyk-cli:docker
     steps:
-      - uses: actions/checkout@v2.3.4
+      - uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
       - name: Test Dockerfile
