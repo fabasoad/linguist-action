@@ -2,6 +2,8 @@
 
 # Linguist action
 
+> **This GitHub action is deprecated and is no longer maintained. Please use [fabasoad/setup-enry-action](https://github.com/fabasoad/setup-enry-action) instead.**
+
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/fabasoad/linguist-action?include_prereleases) ![CI (latest)](https://github.com/fabasoad/linguist-action/workflows/CI%20(latest)/badge.svg) ![Functional tests](https://github.com/fabasoad/linguist-action/workflows/Functional%20tests/badge.svg) ![Security tests](https://github.com/fabasoad/linguist-action/workflows/Security%20tests/badge.svg) ![Lint](https://github.com/fabasoad/linguist-action/workflows/Lint/badge.svg) [![Known Vulnerabilities](https://snyk.io/test/github/fabasoad/linguist-action/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/fabasoad/linguist-action?targetFile=Gemfile.lock)
 
 This action uses [github/linguist](https://github.com/github/linguist) library to detect language type for a file, or, given a repository, determine language breakdown in JSON format.
