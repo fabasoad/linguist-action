@@ -1,5 +1,5 @@
 ---
-name: 'Linguist Action'
+name: 'Linguist Action (Deprecated)'
 description: 'This action detects language type for a file, or, given a repository, determine language breakdown in JSON format.'
 branding:
   icon: list
@@ -15,10 +15,10 @@ inputs:
     default: false
 outputs:
   data:
+    value: ""
     description: 'Result of the output'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.path }}
-    - ${{ inputs.percentage }}
+  using: "composite"
+  steps:
+    - run: echo "::warning::This GitHub action is deprecated and is no longer maintained. Please use https://github.com/fabasoad/setup-enry-action instead"
+      shell: bash
