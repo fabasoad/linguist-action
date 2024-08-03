@@ -1,6 +1,6 @@
 <!-- markdownlint-disable-file MD013 -->
 
-# Linguist action
+# Linguist Action (Deprecated)
 
 > **This GitHub action is deprecated and is no longer maintained. Please use [fabasoad/setup-enry-action](https://github.com/fabasoad/setup-enry-action) instead.**
 

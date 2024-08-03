@@ -2,7 +2,7 @@
 name: 'Linguist Action (Deprecated)'
 description: 'This action detects language type for a file, or, given a repository, determine language breakdown in JSON format.'
 branding:
-  icon: list
+  icon: eye-off
   color: gray-dark
 inputs:
   path:
@@ -12,7 +12,7 @@ inputs:
   percentage:
     description: 'Output will be in percentage format, e.g. {"Python":"100%"}. By default it is in fractions, e.g. {"Python":1.0}. Default: false.'
     required: false
-    default: false
+    default: "false"
 outputs:
   data:
     value: ""
@@ -21,4 +21,4 @@ runs:
   using: "composite"
   steps:
     - run: echo "::warning::This GitHub action is deprecated and is no longer maintained. Please use https://github.com/fabasoad/setup-enry-action instead"
-      shell: bash
+      shell: sh
